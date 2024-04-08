@@ -1,0 +1,36 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+.barra-servicios{
+    margin-bottom: 9rem;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .boton{
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: .5rem;
+    }
+}
+
+.acciones-servicios{
+    
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .boton, .boton-eliminar{
+        margin: 1rem 0;
+        font-size: 1.7rem;
+    }
+
+    
+}

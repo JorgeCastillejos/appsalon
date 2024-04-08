@@ -1,0 +1,22 @@
+{
+    "name": "jorge/mvc",
+    "description": "Repaso Proyecto AppSalon Fetch",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "Controllers\\" : "./controllers",
+            "MVC\\" : "./",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jorge Castillejps"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

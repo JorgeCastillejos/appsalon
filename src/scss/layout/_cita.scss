@@ -1,0 +1,53 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.tabs{
+    @include m.telefono{
+        display: flex;
+    }
+
+    button{
+        background-color: v.$azul;
+        color: v.$blanco;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+        font-weight: v.$bold;
+        cursor: pointer;
+        border: none;
+
+        &:hover{
+            background-color: darken(v.$azul, 10%);
+        }
+    }
+
+    .actual{
+        background-color: v.$blanco;
+        color: v.$azul;
+    }
+}
+
+//Oculta todo el contenido
+.seccion{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}
+
+//Barra que contiene el nombre y el boton de cerrar Sesion
+.barra{
+    margin: 3rem 0;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a{
+        @include m.boton(v.$negro,v.$blanco);
+    }
+}

@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.listado-servicios{
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem
+    }
+    
+    
+}
+
+.servicio{
+    background-color: v.$blanco;
+    padding: 2rem 0;
+    margin: 1rem;
+    text-align: center;
+    font-weight: v.$bold;
+    border-radius: 1rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+
+    &:hover{
+        transform: scale(1.2);
+    }
+    
+    p{
+        color: v.$negro;
+        margin: 1rem 0;
+
+    }
+
+    span{
+        color: v.$azul;
+    }
+}
+
+.seleccionado{
+    background-color: v.$azul;
+    
+    p,span{
+        color: v.$blanco;
+
+
+    }
+}
